@@ -1,0 +1,70 @@
+#include <stdio.h>
+int main() {
+    int choice;
+    double amount, CA; //(CA -- CONVERTED AMOUNT)
+    // Display options to the user
+    printf("Currency Converter\n");
+    printf("Select the conversion:\n");
+    printf("1. USD to INR\n");
+    printf("2. INR to USD\n");
+    printf("3. EUR to INR\n");
+    printf("4. INR to EUR\n");
+    printf("5. GBP to INR\n");
+    printf("6. INR to GBP\n");
+    printf("7. GBP to EUR\n");
+    printf("8. EUR to GBP\n");
+    printf("9. GBP to USD\n");
+    printf("10. USD to GBP\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+    // Ask for the amount to convert
+    printf("Enter the amount to convert: ");
+    scanf("%lf", &amount);
+    // Perform conversion based on user choice
+    switch (choice) {
+        case 1:
+            CA = amount * 85.45;  // Example exchange rate (USD to INR)
+            printf("USD %.2lf is INR %.2lf\n", amount, CA);
+            break;
+        case 2:
+            CA = amount / 85.45;  // Example exchange rate (IND to USD)
+            printf("INR %.2lf is USD %.2lf\n", amount, CA);
+            break;
+        case 3:
+            CA = amount * 92.06;  // Example exchange rate (EUR to INR)
+            printf("EUR %.2lf is INR %.2lf\n", amount, CA);
+            break;
+        case 4:
+            CA = amount / 92.06;  // Example exchange rate (INR to EUR)
+            printf("INR %.2lf is EUR %.2lf\n", amount, CA);
+            break;
+        case 5:
+            CA = amount * 110.64;  // Example exchange rate (GBP to INR)
+            printf("GBP %.2lf is INR %.2lf\n", amount, CA);
+            break;
+        case 6:
+            CA = amount / 110.64;  // Example exchange rate (INR to GBP)
+            printf("INR %.2lf is GBP %.2lf\n", amount, CA);
+            break;
+        case 7:
+            CA = amount * 1.20;  // Example exchange rate (GBP to EUR)
+            printf("GBP %.2lf is EUR %.2lf\n", amount, CA);
+            break;
+        case 8:
+            CA = amount / 1.20;  // Example exchange rate (EUR to GBP)
+            printf("EUR %.2lf is GBP %.2lf\n", amount, CA);
+            break;
+        case 9:
+            CA = amount * 1.30;  // Example exchange rate (GBP to USD)
+            printf("GBP %.2lf is USD %.2lf\n", amount, CA);
+            break;
+        case 10:
+            CA = amount / 1.30;  // Example exchange rate (USD to GBP)
+            printf("USD %.2lf is GBP %.2lf\n", amount, CA);
+            break;
+            
+        default:
+            printf("Invalid choice! Please select a valid option.\n");
+    }
+    return 0;
+}
